@@ -67,7 +67,7 @@ const images = [
 const gallery = document.querySelector(".gallery");
 
 const imageGallery = images.map(
-    ({ preview, original, description }) => `<li class="gallery-item"></li> <a class="gallery-link" href="${original}">
+    ({ preview, original, description }) => `<li class="gallery-item"><a class="gallery-link" href="${original}">
     <img
       class="gallery-image"
       src="${preview}"
@@ -77,7 +77,7 @@ const imageGallery = images.map(
   </a>
 </li>`
 )
-    .join();
+    .join("");
 
 gallery.insertAdjacentHTML("beforeend", imageGallery); 
 gallery.addEventListener("click", (event) => {
